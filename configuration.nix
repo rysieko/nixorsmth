@@ -48,7 +48,10 @@
   # amdgpu firmware
   hardware.graphics.extraPackages = [ rocmPackages.clr.icd pkgs.amdvlk ];
   hardware.graphics.extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];
-  
+  hardware.opengl.enable = true;
+  hardware.opengl.driSupport = true;
+  hardware.opengl.driSupport32Bit = true;
+
   # Enable the Desktop Environment.
   services.displayManager.sddm.wayland.enable = true;
   home.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -74,11 +77,19 @@
      isNormalUser = true;
      extraGroups = [ "wheel" "networkmanager" ]; 
      shell = pkgs.fish;
-     packages = with pkgs; [
+     packages = with pkgs [
      ];
    };
-
-   programs.firefox.enable = true;
+  home-menager = {
+    extraSpecialArgs = { inherit inputs; };
+     users. = {  
+           rysieko = import ./home.nix;
+    }
+  };
+   programs.firefox.enable = {
+      enable = true;
+      defaultBrowser = true;
+      polices = { "DisableTelemetry" "DisableSetDesktopBackground"};   
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
    environment.systemPackages = with pkgs; [
@@ -91,13 +102,23 @@
      git
      cliphist
      udiskie
-     steam
      discord
      prismlauncher
      lutris
      nordic
    ];
+  programs.git = {
+    enable = true;
+    userName = "Rysieko";
+    userEmail = "rrx9506@gmail.com";
+  };
+  nixpkgs.overlays = [ inputs.millennium.overlays.default ];
+  programs.steam. = {
+    enable = true;
+    package = pkgs.steam-millennium; 
+  };
 
+  programs.gamescope.enable= true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
