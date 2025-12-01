@@ -116,6 +116,7 @@
   programs.steam. = {
     enable = true;
     package = pkgs.steam-millennium; 
+    };
   };
 
   programs.gamescope.enable= true;
