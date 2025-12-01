@@ -1,4 +1,4 @@
-{config, osConfig, inputs, ...}:
+{config, ...}:
 
 {
   programs.kitty = lib.mkForce {

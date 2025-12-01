@@ -51,7 +51,6 @@
   
   # Enable the Desktop Environment.
   services.displayManager.sddm.wayland.enable = true;
-  services.desktopManager.plasma6.enable = true;
   home.sessionVariables.NIXOS_OZONE_WL = "1";
   # Enable CUPS to print documents.
   services.printing.enable = true;
