@@ -18,6 +18,16 @@
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
    networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  #auto updates
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.dates = "weekly";
+  #auto cleanup
+  nix.gc.automatic = true;
+  nix.gc.dates = "daily";
+  nix.gc.options = "--delete-older-than 15d";
+  nix.settings.auto-optimise-store = true;
+  #flakes and nix command
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Set your time zone.
   time.timeZone = "Europe/Warsaw";
