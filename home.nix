@@ -1,4 +1,4 @@
-{ config, pkgs, osConfig,... }:
+{ config, pkgs, osConfig,inputs, ... }:
 
 {
   imports = [
@@ -16,8 +16,8 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Materia-dark"; # The name of the theme to be used
-      package = pkgs.materia-theme; # The package containing the theme
+      name = "Nordic"; # The name of the theme to be used
+      package = pkgs.nordic; # The package containing the theme
     };
     iconTheme = {
       name = "Adwaita";
@@ -29,7 +29,6 @@
     };
     gtk4 = {
       extraConfig = " gtk-application-prefer-dark-theme=1";
-       
     };
   };
 

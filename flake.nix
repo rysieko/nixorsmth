@@ -1,14 +1,15 @@
 {
-  description = "Nixos config flake";
+  description = "Nixos desktop flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
+    millennium = {
+      url = "git+https://github.com/SteamClientHomebrew/Millennium"; 
+    }
      home-manager = {
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
-     };
-  inputs.millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";  
+     };  
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
