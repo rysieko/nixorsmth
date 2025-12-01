@@ -20,8 +20,8 @@
       package = pkgs.nordic; # The package containing the theme
     };
     iconTheme = {
-      name = "Adwaita";
-      package = pkgs.adwaita-icon-theme;
+      name = "candy-icons";
+      package = pkgs.candy-icons;
     };
     gtk3 = {
       extraConfig = "gtk-application-prefer-dark-theme=1";

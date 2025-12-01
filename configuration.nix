@@ -106,6 +106,7 @@
      prismlauncher
      lutris
      nordic
+     candy-icons
    ];
   programs.git = {
     enable = true;
