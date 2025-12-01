@@ -76,8 +76,6 @@
      extraGroups = [ "wheel" "networkmanager" ]; 
      shell = pkgs.fish;
      packages = with pkgs; [
-       steam
-       discord
      ];
    };
 
@@ -94,6 +92,10 @@
      git
      cliphist
      udiskie
+     steam
+     discord
+     prismlauncher
+     lutris
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
