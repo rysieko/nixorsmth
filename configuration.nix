@@ -96,6 +96,7 @@
      discord
      prismlauncher
      lutris
+     nordic
    ];
 
   # Some programs need SUID wrappers, can be configured further or are

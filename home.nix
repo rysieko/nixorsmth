@@ -13,6 +13,26 @@
   home-manager.useGlobalPkgs = true;
   wayland.windowManager.hyprland.enable = true;
   programs.hyprpanel.enable = true;
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Materia-dark"; # The name of the theme to be used
+      package = pkgs.materia-theme; # The package containing the theme
+    };
+    iconTheme = {
+      name = "Adwaita";
+      package = pkgs.adwaita-icon-theme;
+    };
+    gtk3 = {
+      extraConfig = "gtk-application-prefer-dark-theme=1";
+      
+    };
+    gtk4 = {
+      extraConfig = " gtk-application-prefer-dark-theme=1";
+       
+    };
+  };
+
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
