@@ -12,6 +12,7 @@
   home.homeDirectory = "/home/rysieko";
   home-manager.useGlobalPkgs = true;
   wayland.windowManager.hyprland.enable = true;
+  programs.hyprpanel.enable = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release

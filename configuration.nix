@@ -45,12 +45,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
   #hyprland stuff
-   = true;
-  
   services.hypridle.enable= true;
   programs.hyprpicker.enable= true;
   programs.hyprlock.enable = true;
-  programs.hyprpanel.enable = true;
   # Enable Bluetooth support.
   services.bluetooth.enable = true;
   
