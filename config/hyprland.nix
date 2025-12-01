@@ -138,7 +138,7 @@ services.hyprpaper.settings = {
     ipc = "on";
     splash = true;
     splash_offset = 2.0;
-    preload = "/home/rysieko/wallpaper.png"
-    wallpaper = "DP-1,/home/rysieko/wallpaper.png"
-  }
+    preload = "/home/rysieko/wallpaper.png";
+    wallpaper = "DP-1,/home/rysieko/wallpaper.png";
+  };
 }  
