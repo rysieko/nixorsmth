@@ -12,12 +12,17 @@
     ];
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.grub.= {
+    enable = true;
+    efiSupport = true;
+    useOSProber = true;
+    device = "nodev";
+    theme = pkgs.minimal-grub-theme
+    # or "nodev" for efi only systems
+  };
   boot.loader.efi.canTouchEfiVariables = true;
 
    networking.hostName = "nixfixesthis"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
    networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
   #auto updates
   system.autoUpgrade.enable = true;
@@ -109,6 +114,7 @@
      lutris
      nordic
      candy-icons
+     minimal-grub-theme
    ];
   programs.git = {
     enable = true;
@@ -123,28 +129,6 @@
   };
 
   programs.gamescope.enable= true;
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
    system.copySystemConfiguration = true;
 
   # This option defines the first version of NixOS you have installed on this particular machine,

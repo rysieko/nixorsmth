@@ -7,7 +7,7 @@ wayland.windowManager.hyprland.settings = {
   "$fileManager" = "Thunar";
   "$terminal" = "kitty";
   "$menu" = "hyprlauncher";
-  exec-once = [
+  exec-once  = [
   "hyprpanel"
   "hyprpaper"
   "steam --console"
