@@ -18,7 +18,6 @@
     useOSProber = true;
     device = "nodev";
     theme = pkgs.minimal-grub-theme
-    # or "nodev" for efi only systems
   };
   boot.loader.efi.canTouchEfiVariables = true;
 
