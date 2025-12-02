@@ -66,7 +66,7 @@
   #hyprland stuff
   services.hypridle.enable= true;
   programs.hyprpicker.enable= true;
-  programs.hyprlock.enable = true;
+  programs.hyprlock.enable = true; #nice
   # Enable Bluetooth support.
   services.bluetooth.enable = true;
   
