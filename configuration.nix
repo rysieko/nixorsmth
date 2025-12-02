@@ -114,6 +114,7 @@
      nordic
      candy-icons
      catppuccin-grub    
+     rofi
    ];
   programs.git = {
     enable = true;

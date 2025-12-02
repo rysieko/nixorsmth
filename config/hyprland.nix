@@ -16,7 +16,6 @@ wayland.windowManager.hyprland.settings = {
   "udiskie"
   "wl-paste --type text --watch cliphist store"
   "wl-paste --type image --watch cliphist store"
-  
   ]
 
   monitor = "DP1,1920x1080@144,auto,auto";
