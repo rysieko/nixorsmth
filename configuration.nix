@@ -53,6 +53,8 @@
   hardware.opengl.driSupport32Bit = true;
 
   # Enable the Desktop Environment.
+  programs.hyprland.enable = true;
+  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   services.displayManager.sddm.wayland.enable = true;
   home.sessionVariables.NIXOS_OZONE_WL = "1";
   # Enable CUPS to print documents.
