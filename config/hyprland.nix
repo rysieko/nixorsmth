@@ -6,7 +6,7 @@ wayland.windowManager.hyprland.settings = {
   "$mod" = "SUPER";
   "$fileManager" = "Thunar";
   "$terminal" = "kitty";
-  "$menu" = "hyprlauncher";
+  "$menu" = "rofi -show drun";
   exec-once  = [
   "hyprpanel"
   "hyprpaper"
