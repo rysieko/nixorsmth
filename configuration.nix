@@ -17,7 +17,7 @@
     efiSupport = true;
     useOSProber = true;
     device = "nodev";
-    theme = pkgs.minimal-grub-theme
+    theme = pkgs.catppuccin-grub
   };
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -113,7 +113,7 @@
      lutris
      nordic
      candy-icons
-     minimal-grub-theme
+     catppuccin-grub    
    ];
   programs.git = {
     enable = true;
